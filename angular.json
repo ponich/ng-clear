@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-clear"
+    }
+  },
+  "defaultProject": "ng-clear",
+  "cli": {
+    "analytics": false
+  }
 }

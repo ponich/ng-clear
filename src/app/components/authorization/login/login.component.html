@@ -1,0 +1,58 @@
+<form (submit)="onSubmitForm($event)" class="mt-2">
+  <div class="row">
+    <div class="col-sm-10 offset-sm-1 col-md-6 offset-md-3">
+
+      <div class="form-group">
+        <label for="login">Login</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+          <input type="text"
+                 class="form-control"
+                 id="login"
+                 placeholder="login"
+                 required
+                 [(ngModel)]="model.login"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="input-group">
+          <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fa fa-lock"></i>
+              </span>
+          </div>
+          <input type="password"
+                 class="form-control"
+                 id="password"
+                 required
+                 [(ngModel)]="model.password"
+                 [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-4">
+          <div class="form-group">
+            <button type="submit"
+                    class="btn btn-sm btn-primary"
+                    [disabled]="(!model.login.length || !model.password.length) || submitted">
+              <i class="fa fa-unlock"></i> Login
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-8 text-center">
+          <a href="#" class="btn btn-sm btn-link">Registration</a>
+          <a href="#" class="btn btn-sm btn-link">Reset password</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>
